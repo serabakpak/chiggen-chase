@@ -1,9 +1,12 @@
+
+
 #container {
 	background-image: url(../imgs/RBa2EX.png);
 	height: 100vh;
 	background-position: center;
 	background-size: cover;
 	font-family: 'Bangers', cursive;
+
 }
 
 header {
@@ -19,30 +22,38 @@ img {
 	display: block;
 }
 
-#race {
+.race {
 	position: relative;
+	
 }
-#player-one {
+#peter {
 	position: relative;
-	left: 0;
+	left: 0px;
 	top: 10px;
-	width: 230px;
+	width: 170px;
+	//padding-left: 48px;
+
 }
 
-#player-two {
+#homer {
 	position: relative;
 	left: 0;
 	top: -155px;
-	width: 230px;
+	width: 170px;
 }
-
-
 
 #chicken {
 	position: relative;
 	width: 100px;
 	left: 200px;
 	top: -75px;
-
-
 }
+
+#dinner {
+	position: absolute;
+	width: 400px;
+	top: 50%;
+  	left: 50%;
+  	transform: translate(-50%, -50%);
+}
+
