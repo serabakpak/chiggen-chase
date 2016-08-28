@@ -1,14 +1,17 @@
 $(document).ready(function() {
     var $homerSimpson = $('#homer');
     var $peterGriffin = $('#peter');
+    var winner = false;
     
+    //click the Catch It button to start the game
     $('#go').click(function() {
         var chickenWidth = $('#chicken').width();
         var trackWidth = $(document).width() - chickenWidth;
+        
         $('#go').removeClass('infinite');
         $('#chicken').removeClass('rollIn');
         $('#chicken').addClass('infinite bounce');
-        $('#chicken').animate({left: trackWidth}, 7000);
+        $('#chicken').animate({left: trackWidth}, 4000);
         
         $(document).keydown(function(key) {
             //console.log(key.which);
@@ -21,6 +24,7 @@ $(document).ready(function() {
                 $('h1').text('Homer Simpson Wins!!!!');
                 var audio = new Audio('media/burp.wav');
                 audio.play();
+                winner = true;
                 return;
             }
             if (positionTwo.left + $($peterGriffin).width() >= trackWidth) {
@@ -29,7 +33,7 @@ $(document).ready(function() {
                 $('h1').text('Peter Griffin Wins!!!!');
                 var audio = new Audio('media/laugh.mp3');
                 audio.play();
-                
+                winner = true;
                 return;
             }
             switch(key.which) {
@@ -44,9 +48,19 @@ $(document).ready(function() {
 
         });
 
-
+        $('#reset').click(reset);
 
     });
       
 });
 
+function reset() {
+    $('.player').css('left', 0);
+    $('#chicken').css('left', '200px');
+    $('#dinner').remove();
+    $('h1').text('Chiggen Chase');
+    $('#go').addClass('infinite');
+    $('img').addClass('rollIn');
+    $('#chicken').removeClass('infinite bounce');
+    winner = false;
+}
