@@ -21,8 +21,6 @@ $(document).ready(function() {
         var chickenWidth = $('#chicken').width();
         var trackWidth = $(document).width() - chickenWidth;
         
-        
-
         $('#go').removeClass('infinite');
         $('#chicken').removeClass('rollIn');
         $('#chicken').addClass('infinite bounce');
@@ -53,11 +51,13 @@ $(document).ready(function() {
                 
                 return;
             }
+            
             switch(key.which) {
-                case 91: 
+                
+                case 90: // press z to make homer go
                     $homerSimpson.css('left', positionOne.left + 40 + 'px');
                     break;
-                case 39: 
+                case 39: // press right arrow to make peter go
                     $peterGriffin.css('left', positionTwo.left + 40 + 'px');
                     break;
             }
@@ -76,7 +76,13 @@ function reset() {
     $('#dinner').remove();
     $('h1').text('Chiggen Chase');
     $('#go').addClass('infinite');
+    $('img').removeClass('rollIn');
+    $('h1').removeClass('slideInLeft');
+    $('.reset-animation').each(function() {
+        void this.offsetWidth;
+    });
     $('img').addClass('rollIn');
+    $('h1').addClass('slideInLeft');
     $('#chicken').removeClass('infinite bounce');
     $('#reset').removeClass('animated infinite pulse');
 }
