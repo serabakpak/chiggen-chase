@@ -2,21 +2,31 @@
 <html>
 <head>
 	
-
+	<link href="https://fonts.googleapis.com/css?family=Bangers" rel="stylesheet">
+	
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
 
-	
+	<link rel="stylesheet" href="css/animate.css">
 	<link rel="stylesheet" href="css/style.css">
 	<script src="http://code.jquery.com/jquery-2.2.2.min.js"></script>
 
 	<script src="js/app.js"></script>
-	<title>Math Race</title>
+	<title>Chiggen Chase</title>
 
 </head>
 <body>
-	<div id="player-one-track" class="track"></div>
-		<img id="player-one" src="imgs/homer-simpson.jpg"></img>
-	<div id="player-two-track" class="track"></div>
-		<img id="player-two" src="imgs/peter-griffin.jpg"></img>
+	<div id="container">
+		
+		<header>
+			<h1 class="animated slideInLeft">Chiggen Chase</h1>
+			<input class="animated infinite pulse" type="button" value="Catch it!" id="go"></button>
+			<input type="button" value="Start Over!" id="reset"></button>
+		</header>
+		<section class="race">
+			<img class="animated rollIn" id="player-one" src="imgs/homer.png"></img>
+			<img class="animated rollIn" id="chicken" src="imgs/chicken.png"><img class="animated rollIn" id="player-two" src="imgs/peter.png"></img>
+		
+		</section>	
+	</div>
 </body>
 </html>
