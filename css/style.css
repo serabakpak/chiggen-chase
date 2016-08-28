@@ -1,16 +1,48 @@
+#container {
+	background-image: url(../imgs/RBa2EX.png);
+	height: 100vh;
+	background-position: center;
+	background-size: cover;
+	font-family: 'Bangers', cursive;
+}
 
+header {
+	text-align: center;
 
+}
 
+h1 {
+	font-size: 80px;
+	margin: 0;
+}
+img {
+	display: block;
+}
+
+#race {
+	position: relative;
+}
 #player-one {
 	position: relative;
 	left: 0;
-	top: 0;
-	width: 400px;
+	top: 10px;
+	width: 230px;
 }
 
 #player-two {
 	position: relative;
 	left: 0;
-	top: 0;
-	width: 400px;
+	top: -155px;
+	width: 230px;
+}
+
+
+
+#chicken {
+	position: relative;
+	width: 100px;
+	left: 200px;
+	top: -75px;
+
+
 }
