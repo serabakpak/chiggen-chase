@@ -20,6 +20,13 @@ $(document).ready(function() {
 
     //click the 'catch it' button to start the game
     $('#go').click(function() {
+        
+
+
+
+
+
+
         var chickenWidth = $('#chicken').width();
         var trackWidth = $(document).width() - chickenWidth;
         
@@ -68,6 +75,11 @@ $(document).ready(function() {
 });
 
 function reset() {
+    //don't allow reset button to be clicked until chicken animation is done
+    if ($('#chicken').is(':animated')) {
+      return false;
+    }
+    
     $('.player').css('left', 0);
     $('#chicken').css('left', '200px');
     $('#dinner').remove();
