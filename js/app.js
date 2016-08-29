@@ -21,12 +21,6 @@ $(document).ready(function() {
     //click the 'catch it' button to start the game
     $('#go').click(function() {
         
-
-
-
-
-
-
         var chickenWidth = $('#chicken').width();
         var trackWidth = $(document).width() - chickenWidth;
         
