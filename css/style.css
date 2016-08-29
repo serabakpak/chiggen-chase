@@ -1,17 +1,13 @@
-
-
 #container {
 	background-image: url(../imgs/RBa2EX.png);
 	height: 100vh;
 	background-position: center;
 	background-size: cover;
 	font-family: 'Bangers', cursive;
-
 }
 
 header {
 	text-align: center;
-
 }
 
 h1 {
