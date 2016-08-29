@@ -18,7 +18,6 @@ $(document).ready(function() {
             }
         });
 
-    
     //click the 'catch it' button to start the game
     $('#go').click(function() {
         var chickenWidth = $('#chicken').width();
@@ -31,10 +30,9 @@ $(document).ready(function() {
         
         $(document).keydown(function(key) {
             
+            //check for winner
             var positionOne = $($homerSimpson).position();
             var positionTwo = $($peterGriffin).position();
-            
-            //check for winner
             if (positionOne.left + $($homerSimpson).width() >= trackWidth) {
                 $(document).off('keydown');
                 $('#container').append('<img id="dinner" src="imgs/winnerwinnerchickendinner.png"></img>');
@@ -44,7 +42,6 @@ $(document).ready(function() {
                 $('#reset').addClass('animated infinite pulse');
                 return;
             }
-
             if (positionTwo.left + $($peterGriffin).width() >= trackWidth) {
                 $(document).off('keydown');
                 $('#container').append('<img id="dinner" src="imgs/winnerwinnerchickendinner.png"></img>');
@@ -78,6 +75,7 @@ function reset() {
     $('#go').addClass('infinite');
     $('img').removeClass('rollIn');
     $('h1').removeClass('slideInLeft');
+    //to restart css animation - https://css-tricks.com/restart-css-animation/
     $('.reset-animation').each(function() {
         void this.offsetWidth;
     });
